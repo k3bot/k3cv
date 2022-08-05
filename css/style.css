@@ -3,7 +3,7 @@
 
 body
 {
- background-image: linear-gradient(to right, #3b3f5d , #242d69) !important;
+background-image: linear-gradient(to right, #3b3f5d , #242d69) !important;
 	font-family: 'Happy Monkey', cursive !important;
 	word-wrap: break-word !important;
 	color: #fff !important;
@@ -81,27 +81,6 @@ body
 
 
 
-/* -- iPad Screen -- */
-@media only screen and (min-width: 480px) and (max-width: 768px) {
-	.code-editor {
-   		width: 500px; 
-	}
-
-	.code-editor:before {
-		width: 500px;
-	}
-}
-
-/* -- iPhone Screen -- */
-@media only screen and (max-width: 479px) {
-	.code-editor {
-		width: 300px;
-	}	
-
-	.code-editor:before {
-		width: 300px;
-	}
-}
 
 /**
  * prism.js tomorrow night eighties for JavaScript, CoffeeScript, CSS and HTML
@@ -260,13 +239,54 @@ pre.line-numbers > code {
 	padding-right: 0.8em;
 	text-align: right;
 }
-@media only screen and (max-width: 600px) {
+
+
+
+
+
+/* ----------------------------- Media Query ------------------------ */
+
+
+/* -- iPad Screen -- */
+@media only screen and (min-width: 480px) and (max-width: 991px) {
+	.code-editor {
+    width: 500px; 
+	}
+
+	.code-editor:before {
+		width: 500px;
+	}
+}
+
+/* -- iPhone Screen -- */
+@media only screen and (max-width: 479px) {
+	.code-editor {
+		width: 300px;
+	}	
+
+	.code-editor:before {
+		width: 300px;
+	}
+}
+.navS{
+	display: none;
+}
+
+@media only screen and (max-width: 767px) {
 .d-flex
 {
-	    display: inline-grid!important;
+	display: inline-grid!important;
 }
-  .card>img{
-     width: 100%;
-     height: auto;
-   }
+.card>img{
+    width: 100%;
+    height: auto;
+}
+.navS{
+	display: block;
+	text-align: center;
+	background-color: #00000026;
+}
+.navB{
+	display: none;
+}
 }
